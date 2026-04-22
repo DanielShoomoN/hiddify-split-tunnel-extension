@@ -1,4 +1,4 @@
-module github.com/author_name/project_urlname
+module github.com/DanielShoomoN/hiddify-split-tunnel-extension
 
 go 1.22.0
 
@@ -6,7 +6,7 @@ toolchain go1.22.3
 
 require (
 	github.com/fatih/color v1.16.0
-	github.com/hiddify/hiddify-core v1.9.1-0.20241001065750-4a521ba61013
+	github.com/hiddify/hiddify-core a82d2b8f047ce769caad42ad9d3ab2c0ef53208a
 	github.com/sagernet/sing-box v1.8.9
 )
 
@@ -125,12 +125,17 @@ require (
 	nhooyr.io/websocket v1.8.6 // indirect
 )
 
-replace github.com/sagernet/sing-box => github.com/hiddify/hiddify-sing-box v1.8.9-0.20240928213625-7b79bf0c814d
 
-replace github.com/xtls/xray-core => github.com/hiddify/xray-core v0.0.0-20240902024714-0fcb0895bb4b
 
-replace github.com/sagernet/wireguard-go => github.com/hiddify/wireguard-go v0.0.0-20240727191222-383c1da14ff1
+
 
 replace github.com/bepass-org/warp-plus => github.com/hiddify/warp-plus v0.0.0-20240717223357-4f3122e0d11d
-
-replace github.com/hiddify/ray2sing => github.com/hiddify/ray2sing v0.0.0-20240928221833-190b549d5222
+replace github.com/sagernet/sing-dns => github.com/shtorm-7/sing-dns v0.4.6-extended-1.0.0
+replace github.com/ameshkov/dnscrypt/v2 => github.com/shtorm-7/dnscrypt/v2 v2.4.0-extended-1.0.0
+replace github.com/hiddify/ray2sing => ./ray2sing
+replace github.com/sagernet/sing-box => ./hiddify-sing-box
+replace github.com/sagernet/wireguard-go => ./hiddify-sing-box/replace/wireguard-go
+replace github.com/sagernet/tailscale => ./hiddify-sing-box/replace/tailscale
+replace github.com/Psiphon-Labs/quic-go => ./hiddify-sing-box/replace/psiphon-quic-go
+replace github.com/Psiphon-Labs/psiphon-tls => ./hiddify-sing-box/replace/psiphon-tls
+replace github.com/net2share/vaydns => github.com/hiddify/vaydns v0.0.0-20260401180616-890dc987a6a9
